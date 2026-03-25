@@ -23,7 +23,7 @@ header, main, footer {
   margin: 0 auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: var(--heading-font);
   color: white;
 }
@@ -89,7 +89,7 @@ section {
     
 }
 
-section h2 {
+section h3 {
     text-align: center;
     border: #023e8a 2px solid;
     padding: 8px;

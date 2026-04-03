@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #055a05; /* forest green */
-  --secondary-color: #f4a261; /* warm sand */
-  --accent1-color: #264653; /* dark slate blue */
-  --accent2-color: #e9c46a; /* light golden yellow */
-  --heading-font: "Times New Roman", "Georgia", serif;
-  --body-font: Arial, Helvetica, sans-serif;
+  --primary-color: #055a05;
+  --secondary-color: #f4a261;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
+  --heading-font: "Times new romans", "Georgia", serif;
+  --body-font: Arial, Halvetica, san-serif;
 }
 
 * {
@@ -16,69 +16,56 @@
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
+  background-color: lightblue;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   width: 840px;
-  margin: 0 auto;
-}
-/* nav, header {
-  display: grid;
-  justify-content: center;
-  place-items: center;
-  grid-columns: 1/3 1/3 1/3 ;
-  grid-rows: 1/2 1/2;
-  max-width: 840px;
-  /* grid-template-columns: 3fr 3fr;
-  grid-template-rows:7fr 0fr; */ 
-header, .grid, nav {
-    max-width: 840px;
-    margin: 0 auto;
-    grid-column: 1 / 3;
-}
-.grid {
-    display: grid;
-    place-items:center;
-} 
-nav {
-    display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-rows: 1fr 1fr 0f;
-    grid-column: span 4
-}
-header img {
-  ;
-  
-}
-h1, h2, h3 {
-  font-family: var(--heading-font);
-  color: white;
+  margin: auto;
 }
 
-nav, p, section, article {
+h1,
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+.history {
+  display: relative;
+  flex-direction: column;
+  border: black ;
+  border-width: thin;
+  background-color: var(--accent2-color); 
+  text-align: center;
+
+}
+
+nav,
+p,
+section,
+article {
   margin: 16px;
   padding: 8px;
 }
-.socialmedia a {
-    text-decoration: none;
+
+.socialmedia {
+  text-decoration: none;
 }
 
 .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-    background: #023e8a;
+  position: relative;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: 400px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 h1 {
   position: absolute;
-  top: 20px;
+  top: 10px;
   width: 100%;
   padding: 16px;
   text-align: center;
@@ -86,39 +73,96 @@ h1 {
   background-color: var(--accent1-color);
   color: #fff;
 }
-.article {
-    position: absolute;
-    padding: 2px;
-    background-color: #f9fbfd;
-    max-width: 600px;
-}
-.article p {
-    color: #333;
-    margin: 0;
-    font-size: 1.1rem;
+
+.hero article {
+  position: relative;
 }
 
 .hero article img {
-    position: relative;
-    float: right;
-    width: 125px;
-    height: auto;
-    margin: 2px;
-    border: 3px solid #fff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15)
-}
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background-color: var(--secondary-color);
-
-    
+  float: center;
+  width: 150px;
+  border: black solid;
 }
 
-section h3 {
-    text-align: center;
-    border: #023e8a 2px solid;
-    padding: 8px;
-    background-color: var(--accent1-color);
+.grid-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+  justify-content: space-evenly;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 16px auto;
+  padding: 30px;
+  color: solid blue;
+  gap: 100px;
+}
+header {
+  display: grid;
+  grid-template-columns: 2fr  1fr 200px 1fr 1fr;
+  justify-content:space-evenly;
+  align-items: stretch;
+}
+img,
+nav {
+  display: flex;
+  justify-content: stretch;
+  padding: 0 auto;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+
+}
+
+section figure {
+  display: grid;
+  grid-column: repeat(5, 1/5);
+  justify-content: flex-start;
+
+}
+figure img {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 100%;
+  height: auto;
+  padding: 8px;
+  margin: 10px;
+  border: thin silver solid;
+}
+figcaption {
+  background-color:#2222;
+  color: var(--accent1-color);
+  padding: 8px;
+  text-align: center;
+  font: italic smaller sans-serif;
+  display: flex;
+  float: left;
+  flex-direction: column;
+}
+.history {
+  padding: 40px;
+  text-align: center;
+}
+.history h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  align-items: center;
+  gap: 30px;
+}
+.history-grid p {
+  text-align: left;
+  line-height: 1.6;
+}
+.history-img {
+  width: 200px;
+  height: 150px;
+  background-color: #5e35b1;
+  border: 1px solid #333;
+  margin:0 auto;
 }
